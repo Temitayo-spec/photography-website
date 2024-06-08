@@ -11,6 +11,7 @@ const GlobalStyle = styled.createGlobalStyle`
     --primary: ${({ theme }) => theme.colors.primary};
     --secondary: ${({ theme }) => theme.colors.secondary};
     --border-secondary: #000;
+    --border-default: rgba(16, 16, 16, 0.1);
   }
 
   * {

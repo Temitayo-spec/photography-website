@@ -42,10 +42,10 @@ const HeroSection = () => {
         </Text>
         <HeroImageSection>
           <ImageCtn>
-            <Image src={hero_banner} alt="hero image" quality={100} />
+            <Image src={hero_banner} alt="hero image" quality={100} priority />
           </ImageCtn>
           <ScrollAndExplore>
-            <Image src={carbon_arrow_down} alt="arrow down" quality={100} />
+            <Image src={carbon_arrow_down} alt="arrow down" />
             <p>Scroll and explore</p>
           </ScrollAndExplore>
         </HeroImageSection>
