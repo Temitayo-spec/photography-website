@@ -5,3 +5,6 @@ export { default as HomeLatestWorkSection } from './Interfaces/Home/LatestWorkSe
 export { default as Layout } from '../layout/Layout';
 export { default as HomeExhibitionSection } from './Interfaces/Home/ExhibitionSection';
 export { default as HomeTestimonialSection } from './Interfaces/Home/TestimonialSection';
+export { default as ContactBtn } from './Common/Contact/ContactBtn';
+
+export { default as ContactSection } from './Common/Contact';

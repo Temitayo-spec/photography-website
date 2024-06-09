@@ -6,6 +6,7 @@ import {
   HomeLatestWorkSection,
   HomeExhibitionSection,
   HomeTestimonialSection,
+  ContactSection,
 } from '@/components';
 
 export default function Home() {
@@ -24,6 +25,7 @@ export default function Home() {
         <HomeLatestWorkSection />
         <HomeExhibitionSection />
         <HomeTestimonialSection />
+        <ContactSection />
       </main>
     </>
   );

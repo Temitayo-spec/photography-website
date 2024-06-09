@@ -90,38 +90,6 @@ const AboutJacob = styled.div`
   }
 `;
 
-const WorkWithMe = styled.div`
-  cursor: pointer;
-  div {
-    &:first-of-type {
-      position: absolute;
-      top: 35%;
-      display: flex;
-      width: 8.75rem;
-      height: 8.75rem;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      border-radius: 31.25rem;
-      background: var(--background-primary, #db574d);
-      color: #fff;
-      text-align: center;
-      font-size: 1.125rem;
-      font-weight: 400;
-      text-transform: uppercase;
-      padding: 0 1.3rem;
-      right: 2rem;
-    }
-    &:nth-of-type(2) {
-      position: static;
-      margin-left: 3rem;
-      width: 10rem;
-      height: 10rem;
-      border: 1px solid var(--secondary);
-      border-radius: 50%;
-    }
-  }
-`;
 
 export {
   HeroSectionWrapper,
@@ -133,5 +101,4 @@ export {
   ScrollAndExplore,
   BriefIntro,
   AboutJacob,
-  WorkWithMe,
 };

@@ -9,11 +9,11 @@ import {
   ScrollAndExplore,
   BriefIntro,
   AboutJacob,
-  WorkWithMe,
 } from './styles';
 import hero_banner from '../../../../../public/images/hero_banner.png';
 import jacob_image from '../../../../../public/images/jacob_img.jpg';
 import carbon_arrow_down from '../../../../../public/svgs/carbon_arrow-down.svg';
+import ContactBtn from '@/components/Common/Contact/ContactBtn';
 
 const HeroSection = () => {
   return (
@@ -34,10 +34,7 @@ const HeroSection = () => {
               <p>Hi, Im Jacob</p>
             </AboutJacob>
 
-            <WorkWithMe>
-              <div>Work With Me</div>
-              <div></div>
-            </WorkWithMe>
+            <ContactBtn text="Work With Me" ml="3rem" />
           </BriefIntro>
         </Text>
         <HeroImageSection>
