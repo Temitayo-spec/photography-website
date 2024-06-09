@@ -70,7 +70,6 @@ const ServicesCtn = styled.div`
   h2 {
     color: var(--secondary);
     font-size: 1.875rem;
-    font-weight: 400;
     line-height: 120%; /* 2.25rem */
     text-transform: uppercase;
   }

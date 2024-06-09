@@ -20,7 +20,6 @@ const LatestWorkInner = styled.div`
     h1 {
       color: var(--primary);
       font-size: 6.25rem;
-      font-weight: 400;
       line-height: 110%; /* 6.875rem */
       text-transform: uppercase;
 
@@ -37,7 +36,6 @@ const LatestWorkInner = styled.div`
       gap: 0.75rem;
 
       font-size: 1.125rem;
-      font-weight: 400;
       line-height: 120%; /* 1.35rem */
     }
   }
@@ -52,7 +50,6 @@ const WorksContainer = styled.div`
 const CardTitle = styled.div`
   h3 {
     font-size: 1.875rem;
-    font-weight: 400;
     line-height: 120%; /* 2.25rem */
     text-transform: uppercase;
 

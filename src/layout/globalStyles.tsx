@@ -19,6 +19,7 @@ const GlobalStyle = styled.createGlobalStyle`
     padding: 0;
     margin: 0;
     font-family: var(--font-mono);
+    font-weight: 400;
   }
 
   html,
@@ -31,6 +32,10 @@ const GlobalStyle = styled.createGlobalStyle`
   a {
     color: inherit;
     text-decoration: none;
+  }
+
+  p {
+    font-size: 1rem;
   }
 `;
 

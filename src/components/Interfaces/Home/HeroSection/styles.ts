@@ -20,7 +20,6 @@ const Text = styled.div`
   h1 {
     color: var(--secondary);
     font-size: 12.5rem;
-    font-weight: 400;
     line-height: 90%; /* 11.25rem */
     display: flex;
     flex-direction: column;

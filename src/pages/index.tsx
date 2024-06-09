@@ -4,6 +4,7 @@ import {
   Topbar,
   HomeServicesSection,
   HomeLatestWorkSection,
+  HomeExhibitionSection,
 } from '@/components';
 
 export default function Home() {
@@ -20,6 +21,7 @@ export default function Home() {
         <HomeHeroSection />
         <HomeServicesSection />
         <HomeLatestWorkSection />
+        <HomeExhibitionSection />
       </main>
     </>
   );
