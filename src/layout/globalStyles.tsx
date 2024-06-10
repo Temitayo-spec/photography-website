@@ -19,7 +19,7 @@ const GlobalStyle = styled.createGlobalStyle`
     padding: 0;
     margin: 0;
     font-family: var(--font-mono);
-    font-weight: 400;
+    font-weight: 300;
   }
 
   html,

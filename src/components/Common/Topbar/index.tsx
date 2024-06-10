@@ -1,12 +1,20 @@
 import { TopbarWrapper, TopbarInner, Hamburger, Line } from './styles';
 
-const Topbar = () => {
+interface TopbarProps {
+  setOpenNav: (open: boolean) => void;
+  openNav: boolean;
+}
+
+const Topbar = ({ setOpenNav, openNav }: TopbarProps) => {
   return (
     <TopbarWrapper>
       <TopbarInner>
         <h4>Jacob Grönberg</h4>
 
-        <Hamburger>
+        <Hamburger
+          className={openNav ? 'add_styles' : ''}
+          onClick={() => setOpenNav(!openNav)}
+        >
           <Line />
           <Line />
           <Line />

@@ -1,13 +1,11 @@
 import Head from 'next/head';
 import {
   HomeHeroSection,
-  Topbar,
   HomeServicesSection,
   HomeLatestWorkSection,
   HomeExhibitionSection,
   HomeTestimonialSection,
   ContactSection,
-  Footer,
 } from '@/components';
 
 export default function Home() {
@@ -20,14 +18,12 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <Topbar />
         <HomeHeroSection />
         <HomeServicesSection />
         <HomeLatestWorkSection />
         <HomeExhibitionSection />
         <HomeTestimonialSection />
         <ContactSection />
-        <Footer />
       </main>
     </>
   );
