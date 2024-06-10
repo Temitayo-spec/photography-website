@@ -2,6 +2,11 @@ import styled from 'styled-components';
 
 const TopbarWrapper = styled.div`
   padding-top: 3.13rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
 `;
 
 const TopbarInner = styled.div`

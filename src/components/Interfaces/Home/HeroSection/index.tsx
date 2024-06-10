@@ -34,7 +34,7 @@ const HeroSection = () => {
               <p>Hi, Im Jacob</p>
             </AboutJacob>
 
-            <ContactBtn text="Work With Me" ml="3rem" />
+            <ContactBtn text="Work With Me" ml="-2rem" isContact={false} />
           </BriefIntro>
         </Text>
         <HeroImageSection>

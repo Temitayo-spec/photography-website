@@ -7,6 +7,7 @@ import {
   HomeExhibitionSection,
   HomeTestimonialSection,
   ContactSection,
+  Footer,
 } from '@/components';
 
 export default function Home() {
@@ -26,6 +27,7 @@ export default function Home() {
         <HomeExhibitionSection />
         <HomeTestimonialSection />
         <ContactSection />
+        <Footer />
       </main>
     </>
   );

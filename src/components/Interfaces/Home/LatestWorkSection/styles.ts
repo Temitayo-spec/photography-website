@@ -3,7 +3,7 @@ import styled from 'styled-components';
 const LatestWorkWrapper = styled.section``;
 
 const LatestWorkInner = styled.div`
-  width: 85%;
+  width: 95%;
   max-width: var(--max-width);
   margin: 0 auto;
   margin-top: 14rem;

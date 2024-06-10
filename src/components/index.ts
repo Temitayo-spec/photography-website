@@ -8,3 +8,4 @@ export { default as HomeTestimonialSection } from './Interfaces/Home/Testimonial
 export { default as ContactBtn } from './Common/Contact/ContactBtn';
 
 export { default as ContactSection } from './Common/Contact';
+export { default as Footer } from './Common/Footer';

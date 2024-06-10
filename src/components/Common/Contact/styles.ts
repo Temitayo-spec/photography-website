@@ -9,7 +9,7 @@ const ContactInner = styled.div`
   align-items: center;
   justify-content: center;
   gap: 4.31rem;
-  width: 85%;
+  width: 95%;
   max-width: var(--max-width);
   margin: 0 auto;
 `;

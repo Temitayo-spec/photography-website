@@ -6,7 +6,7 @@ const ExhibitionWrapper = styled.div`
 `;
 
 const ExhibitionInner = styled.div`
-  width: 85%;
+  width: 95%;
   max-width: var(--max-width);
   margin: 0 auto;
   margin-top: 14rem;

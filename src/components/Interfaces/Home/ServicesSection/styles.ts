@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 
 const ServicesSectionWrapper = styled.div`
-  width: 85%;
+  width: 95%;
   max-width: var(--max-width);
   margin: 0 auto;
-  margin-top: 9.94rem;
+  margin-top: 25.94rem;
 `;
 
 const ServicesSectionInner = styled.div`

@@ -5,7 +5,7 @@ const TestimonialSectionWrapper = styled.div`
 `;
 
 const TestimonialSectionInner = styled.div`
-  width: 85%;
+  width: 95%;
   max-width: var(--max-width);
   margin: 0 auto;
   display: flex;

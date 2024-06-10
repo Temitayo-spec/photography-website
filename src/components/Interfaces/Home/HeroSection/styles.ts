@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 
 const HeroSectionWrapper = styled.section`
-  padding-top: 4.88rem;
+  padding-top: 9.62rem;
 `;
 
 const HeroSectionInner = styled.div`
-  width: 85%;
+  width: 95%;
   margin: 0 auto;
   max-width: var(--max-width);
   display: flex;
@@ -20,7 +20,7 @@ const Text = styled.div`
   h1 {
     color: var(--secondary);
     font-size: 12.5rem;
-    line-height: 90%; /* 11.25rem */
+    line-height: 95%; /* 11.25rem */
     display: flex;
     flex-direction: column;
   }
@@ -50,7 +50,17 @@ const HeroImageSection = styled.div`
   flex-direction: column;
 `;
 
-const ImageCtn = styled.div``;
+const ImageCtn = styled.div`
+  max-width: 46.97rem;
+  width: 45vw;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+`;
 
 const ScrollAndExplore = styled.div`
   align-self: center;
@@ -89,7 +99,6 @@ const AboutJacob = styled.div`
     line-height: 160%; /* 1.6rem */
   }
 `;
-
 
 export {
   HeroSectionWrapper,
