@@ -1,4 +1,7 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
+import { useRef, useState } from 'react';
+import FramerMagnetic from '../../AnimationComps/MagneticEffect';
 
 interface ContactBtnProps {
   text: string;
@@ -13,15 +16,17 @@ const ContactBtn = ({ text, ml, isContact }: ContactBtnProps) => {
         marginLeft: ml,
       }}
     >
-      <div
-        style={{
-          width: isContact ? '12.5rem' : '8.75rem',
-          height: isContact ? '12.5rem' : '8.75rem',
-          fontSize: isContact ? '1.5rem' : '1.125rem',
-        }}
-      >
-        {text}
-      </div>
+      <FramerMagnetic>
+        <div
+          style={{
+            width: isContact ? '12.5rem' : '8.75rem',
+            height: isContact ? '12.5rem' : '8.75rem',
+            fontSize: isContact ? '1.5rem' : '1.125rem',
+          }}
+        >
+          {text}
+        </div>
+      </FramerMagnetic>
       <div
         style={{
           width: isContact ? '13.75rem' : '10rem',
@@ -37,6 +42,7 @@ export default ContactBtn;
 const WorkWithMe = styled.div`
   cursor: pointer;
   position: relative;
+  z-index: 10;
 
   div {
     &:first-of-type {

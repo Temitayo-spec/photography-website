@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 const HeroSectionWrapper = styled.section`
   padding-top: 9.62rem;
@@ -16,27 +17,48 @@ const HeroSectionInner = styled.div`
 const Text = styled.div`
   position: absolute;
   top: 100px;
+`;
 
+const MainText = styled(motion.div)`
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 6;
   h1 {
     color: var(--secondary);
     font-size: 12.5rem;
     line-height: 95%; /* 11.25rem */
-    display: flex;
-    flex-direction: column;
+    overflow: hidden;
+
+    span {
+      font-weight: 400 !important;
+      display: block;
+    }
+
+    &:last-of-type {
+      line-height: 100%;
+    }
   }
 `;
 
-const SubText = styled.div`
+const SubText = styled(motion.div)`
   display: flex;
   flex-direction: column;
   gap: 0.69rem;
   padding-top: 0.69rem;
   margin-left: 11.26rem;
+  position: relative;
+  z-index: 6;
 
   p {
     font-size: 3.75rem;
     line-height: 110%; /* 4.125rem */
     text-transform: uppercase;
+    overflow: hidden;
+
+    span {
+      display: block;
+    }
 
     &:nth-of-type(2) {
       margin-left: 5.82rem;
@@ -54,6 +76,7 @@ const ImageCtn = styled.div`
   max-width: 46.97rem;
   width: 45vw;
   overflow: hidden;
+  position: relative;
 
   img {
     width: 100%;
@@ -84,7 +107,7 @@ const ScrollAndExplore = styled.div`
 
 const BriefIntro = styled.div`
   position: absolute;
-  top: 43rem;
+  top: 35rem;
   display: flex;
   align-items: flex-end;
 `;
@@ -93,6 +116,13 @@ const AboutJacob = styled.div`
   display: flex;
   flex-direction: column;
   gap: 0.62rem;
+
+  & > div {
+    width: 11.25rem;
+    height: 11.25rem;
+    overflow: hidden;
+    position: relative;
+  }
 
   p {
     font-size: 1rem;
@@ -103,6 +133,7 @@ const AboutJacob = styled.div`
 export {
   HeroSectionWrapper,
   HeroSectionInner,
+  MainText,
   Text,
   SubText,
   HeroImageSection,

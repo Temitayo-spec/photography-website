@@ -61,17 +61,17 @@ const Hamburger = styled.div`
 
   &.add_styles {
     ${Line}:first-of-type {
-      top: 50%;
-      transform: translateY(-50%) rotate(45deg);
+      top: 50% !important;
+      transform: translateY(-50%) rotate(45deg) !important;
     }
 
     ${Line}:nth-of-type(2) {
-      transform: translateX(100%);
+      transform: translateX(100%) !important;
     }
 
     ${Line}:last-of-type {
-      top: 50%;
-      transform: translateY(-50%) rotate(-45deg);
+      top: 50% !important;
+      transform: translateY(-50%) rotate(-45deg) !important;
     }
   }
 `;

@@ -59,6 +59,28 @@ const MenuItem = styled(motion.ul)`
       font-size: 4.25rem;
       line-height: 110%; /* 6.875rem */
       text-transform: uppercase;
+      position: relative;
+
+      span {
+        height: 3px;
+        width: 100%;
+        background: var(--secondary);
+        position: absolute;
+        display: block;
+        top: 50%;
+        left: 0;
+        transform: scaleX(0);
+        transition: transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+        transform-origin: right;
+      }
+
+      &:hover {
+        color: var(--secondary);
+        span {
+          transform: scaleX(1);
+          transform-origin: left;
+        }
+      }
     }
   }
 `;

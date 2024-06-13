@@ -120,7 +120,10 @@ const Navbar = ({ openNav }: NavbarProps) => {
               <MenuItem key={i}>
                 <motion.li variants={linksVariants}>
                   <span>0{i + 1}</span>
-                  <Link href={link.href}>{link.text}</Link>
+                  <Link href={link.href}>
+                    <span></span>
+                    {link.text}
+                  </Link>
                 </motion.li>
               </MenuItem>
             ))}
