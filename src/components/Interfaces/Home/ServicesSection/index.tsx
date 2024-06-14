@@ -1,3 +1,5 @@
+import { useRef } from 'react';
+import { smallTextVariant } from '../../../../../constants';
 import {
   ServicesSectionWrapper,
   ServicesSectionInner,
@@ -5,6 +7,7 @@ import {
   ServicesRightCtn,
   ServicesCtn,
 } from './styles';
+import { motion, useInView } from 'framer-motion';
 
 const services = [
   {
@@ -25,16 +28,42 @@ const services = [
 ];
 
 const ServicesSection = () => {
+  const wrapperRef = useRef(null);
+  const inView = useInView(wrapperRef, { amount: 0.3 });
   return (
-    <ServicesSectionWrapper>
+    <ServicesSectionWrapper ref={wrapperRef}>
       <ServicesSectionInner>
         <ServicesLeftCtn>
           <div />
-          <p>Services</p>
+          <motion.p
+            variants={smallTextVariant}
+            initial="hidden"
+            animate={inView ? 'visible' : 'hidden'}
+            viewport={{
+              once: true,
+            }}
+          >
+            Services
+          </motion.p>
         </ServicesLeftCtn>
         <ServicesRightCtn>
           {services.map((service, index) => (
-            <ServicesCtn key={index}>
+            <ServicesCtn
+              key={index}
+              initial={{
+                opacity: 0,
+                y: 50,
+              }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+                transition: {
+                  delay: 0.3,
+                  duration: 0.7,
+                  ease: [0.76, 0, 0.24, 1],
+                },
+              }}
+            >
               <h2>0{index + 1}</h2>
               <div>
                 <p>{service.title}</p>

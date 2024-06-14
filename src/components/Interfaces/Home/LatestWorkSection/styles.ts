@@ -23,7 +23,7 @@ const LatestWorkInner = styled.div`
       line-height: 110%; /* 6.875rem */
       text-transform: uppercase;
 
-      span {
+      span:last-of-type {
         color: var(--secondary);
         text-transform: capitalize;
       }
@@ -93,7 +93,7 @@ const LeftContainer = styled.div`
   ${WorkCard}:first-of-type ${CardImageCtn} {
     max-width: 43.75rem;
     width: 40vw;
-    height: 53.477rem;
+    /* height: 53.477rem; */
   }
 
   ${WorkCard}:last-of-type {

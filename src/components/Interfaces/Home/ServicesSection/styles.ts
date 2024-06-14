@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 const ServicesSectionWrapper = styled.div`
   width: 95%;
@@ -16,10 +17,11 @@ const ServicesSectionInner = styled.div`
   align-items: flex-start;
 `;
 
-const ServicesLeftCtn = styled.div`
+const ServicesLeftCtn = styled(motion.div)`
   display: flex;
   align-items: center;
   gap: 0.62rem;
+  overflow: hidden;
 
   div {
     width: 0.9375rem;
@@ -40,7 +42,7 @@ const ServicesRightCtn = styled.div`
   gap: 3.12rem;
 `;
 
-const ServicesCtn = styled.div`
+const ServicesCtn = styled(motion.div)`
   display: flex;
   gap: 3.19rem;
   padding-bottom: 3.12rem;

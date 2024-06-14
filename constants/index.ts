@@ -13,14 +13,27 @@ const containerVariant = {
 
 const heroTextVariant = {
   hidden: {
-    y: 500,
+    y: 300,
     opacity: 0,
   },
   visible: {
     y: 0,
     opacity: 1,
     transition: {
-      duration: 1,
+      duration: 1.5,
+      ease: [0.76, 0, 0.24, 1],
+    },
+  },
+};
+
+const smallTextVariant = {
+  hidden: {
+    y: 100,
+  },
+  visible: {
+    y: 0,
+    transition: {
+      duration: 0.4,
       ease: [0.76, 0, 0.24, 1],
     },
   },
@@ -46,6 +59,7 @@ const imageWrapperVariants = {
 export {
   containerVariant,
   heroTextVariant,
+  smallTextVariant,
   imageRevealVariant,
   imageWrapperVariants,
 };

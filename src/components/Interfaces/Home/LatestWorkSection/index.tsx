@@ -15,6 +15,11 @@ import work_1 from '../../../../../public/images/work_1.png';
 import work_2 from '../../../../../public/images/work_2.png';
 import work_3 from '../../../../../public/images/work_3.png';
 import work_4 from '../../../../../public/images/work_4.png';
+import TextShuffle from '@/components/Common/AnimationComps/TextShuffle';
+import { useInView } from 'framer-motion';
+import { useRef } from 'react';
+import ScaleImageWrapper from '@/components/Common/AnimationComps/ScaleImageWrapper';
+import ImageRevealCover from '@/components/Common/AnimationComps/ImageRevealCover';
 
 const LatestWorkSection = () => {
   return (
@@ -22,7 +27,10 @@ const LatestWorkSection = () => {
       <LatestWorkInner>
         <header>
           <h1>
-            Latest <span>Work</span>
+            Latest{' '}
+            <span>
+              <TextShuffle text="Work" />
+            </span>
           </h1>
 
           <Link href="/works">
@@ -45,11 +53,14 @@ const LatestWorkSection = () => {
               <CardTitle>
                 <h3>Dancing in</h3>
                 <h3>
-                  Black & <span>White</span>
+                  Black & <TextShuffle text="White" />
                 </h3>
               </CardTitle>
               <CardImageCtn>
-                <Image src={work_1} alt="image of works" fill quality={100} />
+                <ImageRevealCover duration={1.5} />
+                <ScaleImageWrapper duration={1.5}>
+                  <Image src={work_1} alt="image of works" quality={100} />
+                </ScaleImageWrapper>
               </CardImageCtn>
               <CardInfo>
                 <p>New York October 2021</p>
@@ -58,11 +69,14 @@ const LatestWorkSection = () => {
             <WorkCard>
               <CardTitle>
                 <h3>
-                  WEek <span>Fashion</span>
+                  WEek <TextShuffle text="Fashion" />
                 </h3>
               </CardTitle>
               <CardImageCtn>
-                <Image src={work_3} alt="image of works" fill quality={100} />
+                <ImageRevealCover duration={1.2} />
+                <ScaleImageWrapper duration={1.2}>
+                  <Image src={work_3} alt="image of works" quality={100} />
+                </ScaleImageWrapper>
               </CardImageCtn>
               <CardInfo>
                 <p>New York October 2021</p>
@@ -73,11 +87,14 @@ const LatestWorkSection = () => {
             <WorkCard>
               <CardTitle>
                 <h3>
-                  Style & <span>Fashion</span>
+                  Style & <TextShuffle text="Fashion" />
                 </h3>
               </CardTitle>
               <CardImageCtn>
-                <Image src={work_2} alt="image of works" fill quality={100} />
+                <ImageRevealCover duration={1.2} />
+                <ScaleImageWrapper duration={1.2}>
+                  <Image src={work_2} alt="image of works" quality={100} />
+                </ScaleImageWrapper>
               </CardImageCtn>
               <CardInfo>
                 <p>New York October 2021</p>
@@ -86,11 +103,14 @@ const LatestWorkSection = () => {
             <WorkCard>
               <CardTitle>
                 <h3>
-                  One <span>Eye</span>
+                  One <TextShuffle text="Eye" />
                 </h3>
               </CardTitle>
               <CardImageCtn>
-                <Image src={work_4} alt="image of works" fill quality={100} />
+                <ImageRevealCover duration={1.2} />
+                <ScaleImageWrapper duration={1.2}>
+                  <Image src={work_4} alt="image of works" quality={100} />
+                </ScaleImageWrapper>
               </CardImageCtn>
               <CardInfo>
                 <p>New York October 2021</p>
