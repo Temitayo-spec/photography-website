@@ -7,8 +7,11 @@ import {
   HomeTestimonialSection,
   ContactSection,
 } from '@/components';
+import { useRecoilValue } from 'recoil';
+import { preloaderAtom } from '../../atoms/preloaderAtom';
 
 export default function Home() {
+  const isLoading = useRecoilValue(preloaderAtom);
   return (
     <>
       <Head>
@@ -18,7 +21,11 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <HomeHeroSection />
+        <div className='ctn'>
+          <div className={isLoading ? 'hide' : 'reveal'}>
+            <HomeHeroSection />
+          </div>
+        </div>
         <HomeServicesSection />
         <HomeLatestWorkSection />
         <HomeExhibitionSection />

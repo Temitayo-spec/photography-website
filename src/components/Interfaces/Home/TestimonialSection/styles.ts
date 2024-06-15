@@ -71,6 +71,7 @@ const Testimony = styled(motion.div)`
   gap: 3.12rem;
   padding-bottom: 6rem;
   border-bottom: 1px solid var(--border-default);
+  max-width: 43.75rem;
 
   &:last-of-type {
     border-bottom: none;

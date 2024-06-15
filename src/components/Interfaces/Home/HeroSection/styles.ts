@@ -34,7 +34,6 @@ const MainText = styled(motion.div)`
     align-items: center;
 
     span {
-      font-weight: 400 !important;
       display: block;
     }
 

@@ -10,3 +10,4 @@ export { default as ContactBtn } from './Common/Contact/ContactBtn';
 export { default as ContactSection } from './Common/Contact';
 export { default as Footer } from './Common/Footer';
 export { default as Navbar } from './Common/Navbar';
+export { default as Preloader } from './Common/Preloader';

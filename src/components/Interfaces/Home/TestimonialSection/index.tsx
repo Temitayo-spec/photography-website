@@ -61,11 +61,14 @@ const TestimonialSection = () => {
       end: 'bottom bottom',
       scrub: 1,
       pin: leftCtnRef.current,
+      onUpdate: () => {
+        console.log('updated');
+      },
     });
 
-   return () => {
-     trigger.kill(); // Ensure to kill the trigger on component unmount
-   };
+    return () => {
+      trigger.kill(); // Ensure to kill the trigger on component unmount
+    };
   }, []);
 
   return (

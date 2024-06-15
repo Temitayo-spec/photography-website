@@ -37,6 +37,19 @@ const GlobalStyle = styled.createGlobalStyle`
   p {
     font-size: 1rem;
   }
+
+  .ctn {
+    height: 150vh;
+  }
+
+  .hide {
+    display: none;
+  }
+
+  .reveal {
+    display: flex;
+    flex-direction: column;
+  }
 `;
 
 export default GlobalStyle;

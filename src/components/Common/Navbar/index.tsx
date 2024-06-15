@@ -136,7 +136,7 @@ const Navbar = ({ openNav }: NavbarProps) => {
                     }}
                     onMouseLeave={() => {
                       setHover({
-                        num: null,
+                        num: null as unknown as number,
                         value: false,
                       });
                     }}
