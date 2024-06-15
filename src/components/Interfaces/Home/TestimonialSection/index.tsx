@@ -114,6 +114,9 @@ const TestimonialSection = () => {
                   duration: 0.7,
                 },
               }}
+              viewport={{
+                once: true,
+              }}
             >
               <TestimonyImage>
                 <Image

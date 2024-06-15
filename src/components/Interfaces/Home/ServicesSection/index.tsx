@@ -29,7 +29,7 @@ const services = [
 
 const ServicesSection = () => {
   const wrapperRef = useRef(null);
-  const inView = useInView(wrapperRef, { amount: 0.3 });
+  const inView = useInView(wrapperRef, { amount: 0.3, once: true });
   return (
     <ServicesSectionWrapper ref={wrapperRef}>
       <ServicesSectionInner>
@@ -39,9 +39,6 @@ const ServicesSection = () => {
             variants={smallTextVariant}
             initial="hidden"
             animate={inView ? 'visible' : 'hidden'}
-            viewport={{
-              once: true,
-            }}
           >
             Services
           </motion.p>
@@ -61,6 +58,9 @@ const ServicesSection = () => {
                   delay: 0.3,
                   duration: 0.7,
                 },
+              }}
+              viewport={{
+                once: true,
               }}
             >
               <h2>0{index + 1}</h2>

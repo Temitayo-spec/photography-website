@@ -107,6 +107,9 @@ const ExhibitionSection = () => {
                   duration: 0.7,
                 },
               }}
+              viewport={{
+                once: true,
+              }}
             >
               <RowLeft>
                 <RowLeftImageCtn>
