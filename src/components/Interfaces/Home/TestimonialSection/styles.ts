@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import styled from 'styled-components';
 
 const TestimonialSectionWrapper = styled.div`
@@ -65,7 +66,7 @@ const TestimoniesCtn = styled.div`
   gap: 6rem;
 `;
 
-const Testimony = styled.div`
+const Testimony = styled(motion.div)`
   display: flex;
   gap: 3.12rem;
   padding-bottom: 6rem;

@@ -2,10 +2,17 @@ import { motion } from 'framer-motion';
 import { heroTextVariant } from '../../../../constants';
 
 export const HeroText = ({ title }: { title: string }) => {
+  const splitText = title.split('');
   return (
-    <h1>
-      <motion.span variants={heroTextVariant}>{title}</motion.span>
-    </h1>
+    <motion.h1>
+      {splitText.map((word, index) => {
+        return (
+          <motion.span key={index} variants={heroTextVariant}>
+            {word}
+          </motion.span>
+        );
+      })}
+    </motion.h1>
   );
 };
 

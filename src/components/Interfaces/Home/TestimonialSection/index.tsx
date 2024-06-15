@@ -13,6 +13,11 @@ import testimony_1 from '../../../../../public/images/testimony_1.png';
 import testimony_2 from '../../../../../public/images/testimony_2.png';
 import testimony_3 from '../../../../../public/images/testimony_3.png';
 import Image from 'next/image';
+import { useEffect, useRef } from 'react';
+import gsap from 'gsap';
+import ScrollTrigger from 'gsap/dist/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const testimonials = [
   {
@@ -46,10 +51,27 @@ const testimonials = [
 ];
 
 const TestimonialSection = () => {
+  const wrapperRef = useRef(null);
+  const leftCtnRef = useRef(null);
+
+  useEffect(() => {
+    const trigger = ScrollTrigger.create({
+      trigger: wrapperRef.current,
+      start: 'top 30%',
+      end: 'bottom bottom',
+      scrub: 1,
+      pin: leftCtnRef.current,
+    });
+
+   return () => {
+     trigger.kill(); // Ensure to kill the trigger on component unmount
+   };
+  }, []);
+
   return (
-    <TestimonialSectionWrapper>
+    <TestimonialSectionWrapper className="wrapper" ref={wrapperRef}>
       <TestimonialSectionInner>
-        <TestimonialHeaderText>
+        <TestimonialHeaderText ref={leftCtnRef} className="left_ctn">
           <h1>
             <span>What my</span>
             <span>
@@ -75,7 +97,21 @@ const TestimonialSection = () => {
         </TestimonialHeaderText>
         <TestimoniesCtn>
           {testimonials.map((testimony, i) => (
-            <Testimony key={i}>
+            <Testimony
+              key={i}
+              initial={{
+                opacity: 0,
+                y: 50,
+              }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+                transition: {
+                  delay: 0.3,
+                  duration: 0.7,
+                },
+              }}
+            >
               <TestimonyImage>
                 <Image
                   src={testimony.image}

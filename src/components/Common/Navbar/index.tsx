@@ -2,6 +2,8 @@ import Link from 'next/link';
 import { Overlay, OverlayMenu, MenuItem } from './styles';
 import { FooterBottomSection, FooterSocialsLinks } from '../Footer/styles';
 import { AnimatePresence, motion } from 'framer-motion';
+import TextShuffle from '../AnimationComps/TextShuffle';
+import { useState } from 'react';
 
 const navLinks = [
   {
@@ -85,6 +87,10 @@ const containerVariants = {
 };
 
 const Navbar = ({ openNav }: NavbarProps) => {
+  const [hover, setHover] = useState({
+    num: null as unknown as number,
+    value: false,
+  });
   return (
     <AnimatePresence mode="wait">
       {openNav && (
@@ -120,9 +126,26 @@ const Navbar = ({ openNav }: NavbarProps) => {
               <MenuItem key={i}>
                 <motion.li variants={linksVariants}>
                   <span>0{i + 1}</span>
-                  <Link href={link.href}>
-                    <span></span>
-                    {link.text}
+                  <Link
+                    href={link.href}
+                    onMouseEnter={() => {
+                      setHover({
+                        num: i,
+                        value: true,
+                      });
+                    }}
+                    onMouseLeave={() => {
+                      setHover({
+                        num: null,
+                        value: false,
+                      });
+                    }}
+                  >
+                    <TextShuffle
+                      text={link.text}
+                      isNavbar={true}
+                      isHoveredOn={hover.num === i && hover.value}
+                    />
                   </Link>
                 </motion.li>
               </MenuItem>

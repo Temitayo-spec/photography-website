@@ -70,9 +70,9 @@ const HeroSection = () => {
         </Text>
         <HeroImageSection>
           <ImageCtn>
-            <ImageRevealCover delay={0.6} duration={1.5} />
+            <ImageRevealCover delay={1.5} duration={1.5} />
 
-            <ScaleImageWrapper delay={0.9} duration={1.5}>
+            <ScaleImageWrapper delay={1.5} duration={1.5}>
               <Image
                 src={hero_banner}
                 alt="hero image"

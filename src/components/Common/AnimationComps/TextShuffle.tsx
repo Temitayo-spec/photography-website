@@ -3,9 +3,15 @@ import React, { useEffect, useRef } from 'react';
 
 interface TextShuffleProps {
   text: string;
+  isHoveredOn?: boolean;
+  isNavbar?: boolean;
 }
 
-const TextShuffle: React.FC<TextShuffleProps> = ({ text }) => {
+const TextShuffle: React.FC<TextShuffleProps> = ({
+  text,
+  isHoveredOn = false,
+  isNavbar,
+}) => {
   const textRef = useRef<HTMLSpanElement>(null); // Changed to HTMLSpanElement
   const inView = useInView(textRef, {
     margin: '-10%',
@@ -38,8 +44,12 @@ const TextShuffle: React.FC<TextShuffleProps> = ({ text }) => {
   };
 
   useEffect(() => {
-    inView && shuffleText(text, 10);
-  }, [text, inView]);
+    if (isNavbar) {
+      isHoveredOn && shuffleText(text, 10);
+    } else {
+      inView && shuffleText(text, 10);
+    }
+  }, [text, inView, isHoveredOn, isNavbar]);
 
   return <span ref={textRef}>{text}</span>;
 };

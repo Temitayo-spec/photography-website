@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import Link from 'next/link';
 import styled from 'styled-components';
 
@@ -20,16 +21,33 @@ const ExhibitionInner = styled.div`
     align-items: center;
     gap: 3.12rem;
 
-    h1 {
-      color: var(--primary);
-      font-size: 6.25rem;
-      line-height: 110%; /* 6.875rem */
-      text-transform: uppercase;
+    div {
+      display: flex;
+      align-items: center;
+      gap: 0.625rem;
+
+      h1 {
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        span {
+          color: var(--primary);
+          font-size: 6.25rem;
+          line-height: 110%; /* 6.875rem */
+          text-transform: uppercase;
+          display: block;
+        }
+      }
 
       span {
         color: var(--secondary);
+        font-size: 6.25rem;
+        line-height: 110%; /* 6.875rem */
         text-transform: capitalize;
       }
+    }
+
+    h1 {
     }
 
     a {
@@ -49,7 +67,7 @@ const Exhibitions = styled.div`
   gap: 3.12rem;
 `;
 
-const ExhibitionRow = styled.div`
+const ExhibitionRow = styled(motion.div)`
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -72,6 +90,8 @@ const RowLeft = styled.div`
 const RowLeftImageCtn = styled.div`
   width: 14.375rem;
   height: 14.375rem;
+  overflow: hidden;
+  position: relative;
 
   img {
     object-fit: cover;

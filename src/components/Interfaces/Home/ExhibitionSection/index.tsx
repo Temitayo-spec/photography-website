@@ -14,6 +14,12 @@ import exhibition_1 from '../../../../../public/images/exhibition_1.png';
 import exhibition_2 from '../../../../../public/images/exhibition_2.png';
 import exhibition_3 from '../../../../../public/images/exhibition_3.png';
 import Image from 'next/image';
+import { HeroText } from '@/components/Common/AnimationComps/FadeInText';
+import { containerVariant } from '../../../../../constants';
+import { motion } from 'framer-motion';
+import TextShuffle from '@/components/Common/AnimationComps/TextShuffle';
+import ScaleImageWrapper from '@/components/Common/AnimationComps/ScaleImageWrapper';
+import ImageRevealCover from '@/components/Common/AnimationComps/ImageRevealCover';
 
 const exhibitions = [
   {
@@ -59,9 +65,17 @@ const ExhibitionSection = () => {
     <ExhibitionWrapper>
       <ExhibitionInner>
         <header>
-          <h1>
-            Exhibitions <span>‘22</span>
-          </h1>
+          <motion.div
+            variants={containerVariant}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{
+              once: true,
+            }}
+          >
+            <HeroText title="Exhibitions" />
+            <TextShuffle text="‘22" />
+          </motion.div>
 
           <Link href="/works">
             View All{' '}
@@ -79,14 +93,32 @@ const ExhibitionSection = () => {
         </header>
         <Exhibitions>
           {exhibitions.map((exhibition, i) => (
-            <ExhibitionRow key={i}>
+            <ExhibitionRow
+              key={i}
+              initial={{
+                opacity: 0,
+                y: 50,
+              }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+                transition: {
+                  delay: 0.3,
+                  duration: 0.7,
+                },
+              }}
+            >
               <RowLeft>
                 <RowLeftImageCtn>
-                  <Image
-                    src={exhibition.image}
-                    alt="exhibition"
-                    quality={100}
-                  />
+                  <ImageRevealCover />
+
+                  <ScaleImageWrapper>
+                    <Image
+                      src={exhibition.image}
+                      alt="exhibition"
+                      quality={100}
+                    />
+                  </ScaleImageWrapper>
                 </RowLeftImageCtn>
                 <RowLeftInfo>
                   <div>
@@ -97,7 +129,8 @@ const ExhibitionSection = () => {
                     <p>{exhibition.year}</p>
                   </div>
                   <h2>
-                    {exhibition.title} <span>{exhibition.title_span}</span>
+                    {exhibition.title}{' '}
+                    <TextShuffle text={exhibition.title_span} />
                   </h2>
                   <p>{exhibition.description}</p>
                 </RowLeftInfo>

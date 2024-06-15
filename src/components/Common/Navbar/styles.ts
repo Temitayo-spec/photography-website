@@ -48,7 +48,7 @@ const MenuItem = styled(motion.ul)`
     gap: 3.125rem;
     position: relative;
 
-    span {
+    & > span {
       color: var(--secondary);
       font-size: 1.875rem;
       line-height: 120%; /* 2.25rem */
@@ -61,7 +61,7 @@ const MenuItem = styled(motion.ul)`
       text-transform: uppercase;
       position: relative;
 
-      span {
+      /* span {
         height: 3px;
         width: 100%;
         background: var(--secondary);
@@ -72,7 +72,7 @@ const MenuItem = styled(motion.ul)`
         transform: scaleX(0);
         transition: transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
         transform-origin: right;
-      }
+      } */
 
       &:hover {
         color: var(--secondary);

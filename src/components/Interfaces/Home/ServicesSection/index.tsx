@@ -60,7 +60,6 @@ const ServicesSection = () => {
                 transition: {
                   delay: 0.3,
                   duration: 0.7,
-                  ease: [0.76, 0, 0.24, 1],
                 },
               }}
             >

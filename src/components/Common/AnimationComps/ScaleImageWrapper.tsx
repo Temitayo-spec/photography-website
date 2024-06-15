@@ -16,7 +16,7 @@ const ScaleImageWrapper = ({
       variants={imageWrapperVariants}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true }}
+      viewport={{ once: true, amount: 0.2 }}
       transition={{
         delay: delay ?? 0,
         duration: duration,

@@ -24,11 +24,14 @@ const MainText = styled(motion.div)`
   flex-direction: column;
   position: relative;
   z-index: 6;
+
   h1 {
     color: var(--secondary);
     font-size: 12.5rem;
     line-height: 95%; /* 11.25rem */
     overflow: hidden;
+    display: flex;
+    align-items: center;
 
     span {
       font-weight: 400 !important;

@@ -8,7 +8,7 @@ const ImageRevealCover = ({ delay, duration = 1 }: { delay?: number, duration?: 
       variants={imageRevealVariant}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true }}
+      viewport={{ once: true, amount: 0.3 }}
       transition={{
         delay: delay ?? 0,
         duration: duration,
